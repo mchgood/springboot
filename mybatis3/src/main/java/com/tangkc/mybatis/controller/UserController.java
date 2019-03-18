@@ -1,12 +1,12 @@
 package com.tangkc.mybatis.controller;
 
-import com.tangkc.mybatis.dao.BaseDao;
+import com.tangkc.mybatis.mapper.BaseDao;
 import com.tangkc.mybatis.entity.UserInfo;
-import org.apache.ibatis.session.SqlSession;
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,10 +17,13 @@ import java.util.List;
  */
 @Controller
 public class UserController {
-    @Autowired
+    @Resource
     BaseDao baseDao;
 
+    @ResponseBody
+    @RequestMapping("/findAll")
     public List<UserInfo> findAll(){
-        return SqlSessionTemplate
+        List<UserInfo> list = (List<UserInfo>)baseDao.findForList("com.tangkc.mybatis.mapper.UserMapper.findAll", UserInfo.class);
+        return list;
     }
 }
