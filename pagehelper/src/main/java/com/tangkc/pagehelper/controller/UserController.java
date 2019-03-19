@@ -1,29 +1,29 @@
-package com.tangkc.mybatis.controller;
+package com.tangkc.pagehelper.controller;
 
-import com.tangkc.mybatis.mapper.BaseDao;
-import com.tangkc.mybatis.entity.UserInfo;
+import com.github.pagehelper.PageInfo;
+import com.tangkc.pagehelper.entity.UserInfo;
+import com.tangkc.pagehelper.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * @author tangkc
  * @title: UserController
  * @description: TODO
- * @date 2019-03-18
+ * @date 2019-03-19
  */
 @Controller
 public class UserController {
     @Resource
-    BaseDao baseDao;
+    UserService userService;
 
     @ResponseBody
     @RequestMapping("/findAll")
-    public List<UserInfo> findAll(){
-        List<UserInfo> list = (List<UserInfo>)baseDao.findForList("mapper.tangkc.mybatis.mapper.UserMapper.findAll", UserInfo.class);
-        return list;
+    public PageInfo<UserInfo> findAll(){
+        PageInfo<UserInfo> page = userService.findAll();
+        return page;
     }
 }

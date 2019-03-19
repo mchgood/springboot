@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 #\u5F00\u542F\u9A7C\u5CF0\u547D\u540D\u6CD5
 mybatis:
-  #type-aliases-package: com.tangkc.mybatis.entity
+  #type-aliases-package: mapper.tangkc.mybatis.entity
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
 #\u6DFB\u52A0mybatis-config.xml\u8DEF\u5F84\u548Cmapper.xml\u8DEF\u5F84

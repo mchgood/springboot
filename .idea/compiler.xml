@@ -9,6 +9,7 @@
         <module name="mybatis1" />
         <module name="mybatis2" />
         <module name="mybatis3" />
+        <module name="pagehelper" />
       </profile>
     </annotationProcessing>
   </component>
