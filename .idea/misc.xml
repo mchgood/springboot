@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/mybatis2/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis3/pom.xml" />
         <option value="$PROJECT_DIR$/pagehelper/pom.xml" />
+        <option value="$PROJECT_DIR$/lombok/pom.xml" />
       </list>
     </option>
   </component>
