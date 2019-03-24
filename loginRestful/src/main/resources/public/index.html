@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Signin Template for Bootstrap</title>
+
+		<link rel="stylesheet" href="/asserts/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/asserts/css/signin.css">
+		<script src="/webjars/jquery/3.3.1-2/jquery.js"></script>
+	</head>
+
+	<body class="text-center">
+		<form class="form-signin">
+			<img class="mb-4" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+			<label class="sr-only">Username</label>
+			<input id="username" type="text" class="form-control" placeholder="username" required="" autofocus="">
+			<label  class="sr-only">Password</label>
+			<input id="password" type="password" class="form-control" placeholder="password" required="">
+			<div class="checkbox mb-3">
+				<label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="validate();return false;" name="aaa">Sign in</button>
+			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+			<a class="btn btn-sm">中文</a>
+			<a class="btn btn-sm">English</a>
+		</form>
+	</body>
+<script>
+    function validate(){
+        var username = $('#username').val();
+        var password = $('#password').val();
+        window.location.href ="/login?username="+username+"&password="+password;
+    }
+</script>
+
+</html>
