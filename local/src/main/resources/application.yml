@@ -1,0 +1,8 @@
+spring:
+  messages:
+    basename: i18n.login
+  thymeleaf:
+    cache: false
+server:
+  tomcat:
+    uri-encoding: UTF-8
